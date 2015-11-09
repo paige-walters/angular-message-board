@@ -1,0 +1,17 @@
+body {
+    background-color: #c0dfd9;
+    color: #3b3a36;
+    /*background-image: url("chalkboard.png");*/
+}
+
+
+.jumbotron {
+    background-color: #e9ece5;
+    color: #3b3a36;
+}
+
+.individuals {
+    margin: 10px;
+    background-color: #b3c2bf;
+    color: #3b3a36;
+}

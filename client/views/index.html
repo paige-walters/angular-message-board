@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Board</title>
+
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <script type="text/javascript" src="vendors/angular.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/app.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container" ng-controller="WelcomeController">
+        <div class="jumbotron">
+        <h1>My Message Board</h1>
+        </div>
+            <form class="form-horizontal" id="message">
+                <fieldset>
+                <div class="control-group">
+                    <label class="control-label">Name</label>
+                    <input ng-model="note.name" type="text" id="name" name="name" placeholder="Enter name:"><br>
+                    <label class="control-label">Comment:</label>
+                    <input ng-model="note.comment" type="text" class="form-control" name="comment" placeholder="Write your comment here!" rows="5" id="comment">
+                </div>
+
+                </fieldset>
+            </form>
+        <div class="form-actions">
+            <button ng-click="clickButton(note)" class="btn btn-primary" id="submit">Submit</button>
+        </div>
+
+    <div ng-repeat="people in nameArray" id="board">
+        <div class="col-md-3 lead">
+            <p>{{people.name}}</p>
+            <p>{{people.comment}}</p>
+            <button ng-click="deleteButton(people.id)" class="delete btn btn-danger">Delete Me!</button>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
